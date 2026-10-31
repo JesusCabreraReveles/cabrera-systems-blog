@@ -21,3 +21,5 @@ duration: 12
 
 - A green dashboard measures what you already knew how to measure.
 - Real incidents live in what you didn't instrument.
+
+![Sample diagram with an orange rectangle](./img-1.webp)

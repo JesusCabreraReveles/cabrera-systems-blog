@@ -21,3 +21,5 @@ duration: 12
 
 - Un dashboard en verde mide lo que ya sabías medir.
 - Los incidentes reales viven en lo que no instrumentaste.
+
+![Diagrama de muestra con un rectángulo naranja](./img-1.webp)
