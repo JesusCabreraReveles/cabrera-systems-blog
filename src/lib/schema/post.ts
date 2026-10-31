@@ -1,5 +1,5 @@
 // Frontmatter of src/content/posts/<id>/{en,es}.md.
-// Contract with talkingwithmyself-agent: any breaking change bumps SCHEMA_VERSION.
+// Contract with talkingwithmyself-agent. v1 frozen on 2026-10-31: any breaking change bumps SCHEMA_VERSION.
 import { z } from 'zod';
 
 export const SCHEMA_VERSION = 1;
