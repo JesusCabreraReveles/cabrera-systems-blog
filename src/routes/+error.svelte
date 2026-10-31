@@ -57,11 +57,12 @@
 			{status}
 		</h1>
 
-		<div class="mt-6 space-y-2 font-mono text-sm text-slate-300 sm:text-base">
+		<!-- Terminal block: centered on the page, lines aligned left like a shell. -->
+		<div class="mt-6 inline-block space-y-2 text-left font-mono text-sm text-slate-300 sm:text-base">
 			{#each order as lang (lang)}
 				<p lang={lang}><span class="text-accent">&gt;</span> {lines[lang]}</p>
 			{/each}
-			<p aria-hidden="true"><span class="cursor text-accent">_</span></p>
+			<p aria-hidden="true"><span class="text-accent">&gt;</span> <span class="cursor text-accent">_</span></p>
 		</div>
 
 		<nav class="mt-10 flex flex-col items-center justify-center gap-3 font-mono sm:flex-row text-xs tracking-[0.2em] uppercase">
