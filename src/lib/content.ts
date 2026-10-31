@@ -19,9 +19,15 @@ const markdown = import.meta.glob<string>('/src/content/posts/*/{en,es}.md', {
 const components = import.meta.glob<Component>('/src/content/posts/*/{en,es}.md', {
 	import: 'default'
 });
-const covers = import.meta.glob<string>('/src/content/posts/*/*.webp', {
+const images = import.meta.glob<string>('/src/content/posts/*/*.webp', {
 	eager: true,
 	query: '?url',
+	import: 'default'
+});
+// Texts written by talkingwithmyself-agent for the Share Kit (never shown on public pages).
+const shareFiles = import.meta.glob<string>('/src/content/posts/*/share/*', {
+	eager: true,
+	query: '?raw',
 	import: 'default'
 });
 // Only the file names matter, for the folder rules.
@@ -34,8 +40,21 @@ export type Post = {
 	coverUrl: string;
 	/** URL of the same post in the other languages. */
 	alternates: Partial<Record<Lang, string>>;
+	/** Raw Markdown body, without frontmatter. */
+	body: string;
+	/** Built URLs of the folder's images, by file name (e.g. "img-1.webp"). */
+	images: Record<string, string>;
+	/** Files in share/, by name (e.g. "linkedin.es.txt"). */
+	share: Record<string, string>;
 	load: () => Promise<Component>;
 };
+
+const filesUnder = <T>(files: Record<string, T>, prefix: string) =>
+	Object.fromEntries(
+		Object.entries(files)
+			.filter(([path]) => path.startsWith(prefix))
+			.map(([path, value]) => [path.slice(prefix.length), value])
+	);
 
 function loadPosts(): Post[] {
 	const ids = [...new Set(allFiles.map((f) => f.slice(POSTS.length).split('/')[0]))];
@@ -72,8 +91,11 @@ function loadPosts(): Post[] {
 				id: p.id,
 				lang: p.lang,
 				meta: p.frontmatter,
-				coverUrl: covers[prefix + p.frontmatter.cover.slice(2)],
+				coverUrl: images[prefix + p.frontmatter.cover.slice(2)],
 				alternates: Object.fromEntries(siblings.map((s) => [s.lang, postPath(s.lang, s.frontmatter.slug)])),
+				body: p.body,
+				images: filesUnder(images, prefix),
+				share: filesUnder(shareFiles, `${prefix}share/`),
 				load: components[`${prefix}${p.lang}.md`]
 			};
 		})

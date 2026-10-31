@@ -1,0 +1,7 @@
+Un dashboard en verde no es un sistema sano.
+
+Es un sistema que mide lo que ya sabía medir. (texto de muestra escrito "por el agente")
+
+https://cabrera.systems/blog/es/los-dashboards-mienten
+
+#observabilidad #sre
