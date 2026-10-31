@@ -87,6 +87,16 @@ export function postPath(lang: Lang, slug: string) {
 	return `${lang}/${slug}`;
 }
 
+/** Absolute URL for a base-relative path, e.g. "es/mi-post". */
+export function absoluteUrl(path = '') {
+	return path ? `${site.baseUrl}/${path}` : site.baseUrl;
+}
+
+/** Absolute URL for a built asset (already includes the base path). */
+export function absoluteAsset(url: string) {
+	return new URL(url, site.baseUrl).href;
+}
+
 export function postsIn(lang: Lang) {
 	return posts.filter((p) => p.lang === lang);
 }

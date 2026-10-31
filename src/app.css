@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 /* Design tokens from ~/code/myPortfolio. */
 @theme {
@@ -22,4 +23,24 @@
 		linear-gradient(color-mix(in srgb, var(--color-accent) 6%, transparent) 1px, transparent 1px),
 		linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 6%, transparent) 1px, transparent 1px);
 	background-size: 40px 40px;
+}
+
+/* Long-form reading: softer than white, generous line height, accent links. */
+@utility prose-blog {
+	--tw-prose-body: #cbd5e1;
+	--tw-prose-headings: #fff;
+	--tw-prose-lead: #94a3b8;
+	--tw-prose-links: var(--color-accent);
+	--tw-prose-bold: #fff;
+	--tw-prose-counters: #64748b;
+	--tw-prose-bullets: var(--color-accent);
+	--tw-prose-hr: rgb(255 255 255 / 0.08);
+	--tw-prose-quotes: #e2e8f0;
+	--tw-prose-quote-borders: var(--color-accent);
+	--tw-prose-captions: #64748b;
+	--tw-prose-code: #fdba74;
+	--tw-prose-pre-code: #e2e8f0;
+	--tw-prose-pre-bg: var(--color-ink-800);
+	--tw-prose-th-borders: rgb(255 255 255 / 0.1);
+	--tw-prose-td-borders: rgb(255 255 255 / 0.06);
 }

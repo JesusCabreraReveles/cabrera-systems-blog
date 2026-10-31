@@ -7,7 +7,10 @@ export const ui = {
 		empty: 'First post coming soon.',
 		listen: 'Listen',
 		readIn: 'Leer en español',
-		switchTo: 'ES'
+		switchTo: 'ES',
+		back: 'All posts',
+		sources: 'Sources',
+		locale: 'en_US'
 	},
 	es: {
 		latest: 'Lo último',
@@ -15,7 +18,10 @@ export const ui = {
 		empty: 'El primer post viene pronto.',
 		listen: 'Escuchar',
 		readIn: 'Read in English',
-		switchTo: 'EN'
+		switchTo: 'EN',
+		back: 'Todos los posts',
+		sources: 'Fuentes',
+		locale: 'es_MX'
 	}
 } satisfies Record<Lang, Record<string, string>>;
 

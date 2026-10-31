@@ -18,6 +18,7 @@
 	{#each site.languages as lang (lang)}
 		<link rel="alternate" hreflang={lang} href="{site.baseUrl}/{lang}" />
 	{/each}
+	<link rel="alternate" type="application/rss+xml" title={site.title} href="{site.baseUrl}/{data.lang}/rss.xml" />
 </svelte:head>
 
 <!-- Hero -->
@@ -60,6 +61,14 @@
 				</a>
 			</li>
 		{/each}
+		<li>
+			<a
+				href={resolve(`${data.lang}/rss.xml`)}
+				class="block rounded border border-white/10 px-3 py-1.5 text-slate-400 transition-colors hover:border-accent hover:text-white"
+			>
+				RSS
+			</a>
+		</li>
 	</ul>
 </nav>
 
