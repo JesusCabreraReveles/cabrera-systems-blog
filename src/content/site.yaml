@@ -1,0 +1,45 @@
+# Editorial config of Talking With Myself.
+# Validated by src/lib/schema/site.ts (JSON Schema: schema/site.schema.json).
+# talkingwithmyself-agent only edits `tags`; everything else is edited by hand.
+
+title: Talking With Myself
+tagline:
+  en: Engineering, leadership & systems, thinking out loud.
+  es: Ingeniería, liderazgo y sistemas, pensando en voz alta.
+baseUrl: https://cabrera.systems/blog
+languages: [en, es]
+
+author:
+  name: Jesus Cabrera Reveles
+  url: https://cabrera.systems
+
+social:
+  x: TalkingWMy
+
+# Shown under the hero, in this order.
+links:
+  - id: portfolio
+    label: { en: Portfolio, es: Portafolio }
+    url: https://cabrera.systems
+  - id: github
+    label: { en: GitHub, es: GitHub }
+    url: https://github.com/JesusCabreraReveles
+  - id: linkedin
+    label: { en: LinkedIn, es: LinkedIn }
+    url: https://linkedin.com/in/jesus-cabrera-reveles-a784a73a3
+  - id: books
+    label: { en: Books, es: Libros }
+    url: https://cabrera.systems/#books
+  - id: x
+    label: { en: X, es: X }
+    url: https://x.com/TalkingWMy
+
+# Controlled tag list. A post may only use ids listed here.
+# To add one: append it here in the same PR as the post.
+tags:
+  - id: ideas
+    label: { en: Ideas, es: Ideas }
+  - id: fumadas
+    label: { en: Wild ideas, es: Fumadas }
+  - id: tec
+    label: { en: Tech, es: Tec }

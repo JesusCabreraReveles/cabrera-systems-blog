@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+/* Design tokens from ~/code/myPortfolio. */
+@theme {
+	--font-headline: 'Space Grotesk', ui-sans-serif, sans-serif;
+	--font-sans: 'Inter', ui-sans-serif, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+	--color-ink-950: #02050f;
+	--color-ink-900: #030610;
+	--color-ink-850: #050a14;
+	--color-ink-800: #070e1c;
+	--color-ink-700: #0b1426;
+	--color-ink-600: #111e38;
+
+	/* Blog accent: warm orange from the portfolio palette (portfolio uses blue #3b82f6). */
+	--color-accent: #f97316;
+}
+
+@utility grid-overlay {
+	background-image:
+		linear-gradient(color-mix(in srgb, var(--color-accent) 6%, transparent) 1px, transparent 1px),
+		linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 6%, transparent) 1px, transparent 1px);
+	background-size: 40px 40px;
+}

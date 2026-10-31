@@ -1,0 +1,118 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"schemaVersion": {
+			"type": "number",
+			"const": 1
+		},
+		"title": {
+			"type": "string",
+			"minLength": 1,
+			"maxLength": 120
+		},
+		"slug": {
+			"type": "string",
+			"maxLength": 50,
+			"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+		},
+		"lang": {
+			"type": "string",
+			"enum": [
+				"en",
+				"es"
+			]
+		},
+		"original": {
+			"type": "boolean",
+			"description": "true in the language Jesus spoke/wrote in"
+		},
+		"date": {
+			"type": "string",
+			"format": "date",
+			"pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+			"description": "YYYY-MM-DD, America/Mexico_City. Merge date; provisional on branches"
+		},
+		"description": {
+			"type": "string",
+			"minLength": 1,
+			"maxLength": 200,
+			"description": "Meta description and excerpt"
+		},
+		"cover": {
+			"type": "string",
+			"pattern": "^\\.\\/[a-z0-9]+(?:-[a-z0-9]+)*\\.webp$",
+			"description": "e.g. ./cover.webp"
+		},
+		"coverAlt": {
+			"type": "string",
+			"minLength": 1
+		},
+		"tags": {
+			"minItems": 1,
+			"maxItems": 5,
+			"type": "array",
+			"items": {
+				"type": "string",
+				"pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+			},
+			"description": "Tag ids from src/content/site.yaml"
+		},
+		"hashtags": {
+			"default": [],
+			"description": "For social networks, per language, without #",
+			"maxItems": 10,
+			"type": "array",
+			"items": {
+				"type": "string",
+				"pattern": "^[\\p{L}\\p{N}_]+$"
+			}
+		},
+		"sourceUrls": {
+			"default": [],
+			"type": "array",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			}
+		},
+		"draft": {
+			"default": false,
+			"type": "boolean"
+		},
+		"audio": {
+			"description": "e.g. ./audio.mp3",
+			"type": "string",
+			"pattern": "^\\.\\/[a-z0-9]+(?:-[a-z0-9]+)*\\.mp3$"
+		},
+		"audioLang": {
+			"description": "Language spoken in the audio and transcript.md",
+			"type": "string",
+			"enum": [
+				"en",
+				"es"
+			]
+		},
+		"duration": {
+			"description": "Audio length in seconds",
+			"type": "integer",
+			"exclusiveMinimum": 0,
+			"maximum": 9007199254740991
+		}
+	},
+	"required": [
+		"schemaVersion",
+		"title",
+		"slug",
+		"lang",
+		"original",
+		"date",
+		"description",
+		"cover",
+		"coverAlt",
+		"tags"
+	],
+	"additionalProperties": false,
+	"$id": "https://cabrera.systems/blog/schema/post.schema.json",
+	"title": "Post frontmatter (schemaVersion 1)"
+}
