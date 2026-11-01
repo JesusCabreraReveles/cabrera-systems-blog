@@ -23,3 +23,7 @@ duration: 12
 - Real incidents live in what you didn't instrument.
 
 ![Sample diagram with an orange rectangle](./img-1.webp)
+
+```ts
+const healthy = (p99: number) => p99 < 300; // { braces } survive
+```

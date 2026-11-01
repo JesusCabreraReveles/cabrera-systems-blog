@@ -3,6 +3,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { mdsvex } from 'mdsvex';
 import { defineConfig } from 'vite';
+import { highlight } from './scripts/highlight.ts';
 import { mdImages } from './scripts/md-images.ts';
 
 export default defineConfig({
@@ -15,7 +16,7 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			extensions: ['.svelte', '.md'],
-			preprocess: [mdImages(), mdsvex({ extensions: ['.md'] })],
+			preprocess: [mdImages(), mdsvex({ extensions: ['.md'], highlight: { highlighter: highlight } })],
 			adapter: adapter({ runtime: 'nodejs22.x' }),
 			// Served under cabrera.systems/blog (stage 2 mounts it there).
 			paths: { base: '/blog' },

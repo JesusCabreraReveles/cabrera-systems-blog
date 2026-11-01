@@ -79,7 +79,7 @@
 		class="mt-10 aspect-[1200/630] w-full rounded-lg border border-white/5 object-cover"
 	/>
 
-	<article class="prose prose-lg prose-blog mt-12 max-w-none prose-headings:font-headline">
+	<article class="prose prose-lg prose-blog prose-blog-code mt-12 max-w-none prose-headings:font-headline">
 		<Body />
 	</article>
 

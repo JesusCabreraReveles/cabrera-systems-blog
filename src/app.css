@@ -44,3 +44,11 @@
 	--tw-prose-th-borders: rgb(255 255 255 / 0.1);
 	--tw-prose-td-borders: rgb(255 255 255 / 0.06);
 }
+
+/* Shiki code blocks (colors come inline from scripts/highlight.ts). */
+@utility prose-blog-code {
+	& pre.shiki {
+		border: 1px solid rgb(255 255 255 / 0.06);
+		font-size: 0.875rem;
+	}
+}
