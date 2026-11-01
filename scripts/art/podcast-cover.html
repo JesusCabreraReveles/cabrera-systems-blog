@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- Source of static/podcast-cover.png (square artwork that podcast apps require, 1400×1400).
+     Regenerate: Chrome --headless=new --window-size=1400,1400 --screenshot=static/podcast-cover.png file://…/podcast-cover.html -->
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@500&display=block" rel="stylesheet" />
+<style>
+	html, body { margin: 0; width: 1400px; height: 1400px; background: #02050f; overflow: hidden; }
+	body {
+		position: relative;
+		background-image:
+			radial-gradient(circle at 50% 38%, rgb(249 115 22 / 0.22), transparent 55%),
+			linear-gradient(rgb(249 115 22 / 0.07) 2px, transparent 2px),
+			linear-gradient(90deg, rgb(249 115 22 / 0.07) 2px, transparent 2px);
+		background-size: 100% 100%, 100px 100px, 100px 100px;
+		font-family: 'Space Grotesk', sans-serif;
+	}
+	svg { position: absolute; left: 400px; top: 170px; width: 600px; height: 600px; }
+	h1 { position: absolute; left: 0; right: 0; top: 820px; margin: 0; text-align: center; color: #fff; font-size: 150px; line-height: 1; letter-spacing: -4px; }
+	p { position: absolute; left: 0; right: 0; top: 1180px; margin: 0; text-align: center; color: #f97316; font: 500 44px 'JetBrains Mono', monospace; letter-spacing: 8px; }
+</style>
+</head>
+<body>
+	<svg viewBox="0 0 100 100">
+		<defs>
+			<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+		</defs>
+		<g filter="url(#glow)">
+			<path d="M 24 20 H 76 A 8 8 0 0 1 84 28 V 60 A 8 8 0 0 1 76 68 H 46 L 30 82 V 68 H 24 A 8 8 0 0 1 16 60 V 28 A 8 8 0 0 1 24 20 Z" fill="#050a14" stroke="#f97316" stroke-width="5" stroke-linejoin="round" />
+			<path d="M 33 34 L 43 44 L 33 54" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+			<rect x="50" y="49" width="18" height="5" rx="2" fill="#fff" />
+		</g>
+	</svg>
+	<h1>Talking With<br />Myself</h1>
+	<p>// JESUS CABRERA</p>
+</body>
+</html>

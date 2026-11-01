@@ -10,6 +10,8 @@ export const ui = {
 		switchTo: 'ES',
 		back: 'All posts',
 		sources: 'Sources',
+		transcript: 'Transcript',
+		audioIn: 'Audio in Spanish',
 		locale: 'en_US'
 	},
 	es: {
@@ -21,6 +23,8 @@ export const ui = {
 		switchTo: 'EN',
 		back: 'Todos los posts',
 		sources: 'Fuentes',
+		transcript: 'Transcripción',
+		audioIn: 'Audio en inglés',
 		locale: 'es_MX'
 	}
 } satisfies Record<Lang, Record<string, string>>;

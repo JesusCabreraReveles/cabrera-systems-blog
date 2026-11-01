@@ -24,6 +24,17 @@ const images = import.meta.glob<string>('/src/content/posts/*/*.webp', {
 	query: '?url',
 	import: 'default'
 });
+// Opt-in audio: only posts the author chose to publish with their voice.
+const audios = import.meta.glob<string>('/src/content/posts/*/*.mp3', {
+	eager: true,
+	query: '?url',
+	import: 'default'
+});
+const transcripts = import.meta.glob<string>('/src/content/posts/*/transcript.md', {
+	eager: true,
+	query: '?raw',
+	import: 'default'
+});
 // Texts written by talkingwithmyself-agent for the Share Kit (never shown on public pages).
 const shareFiles = import.meta.glob<string>('/src/content/posts/*/share/*', {
 	eager: true,
@@ -38,6 +49,8 @@ export type Post = {
 	lang: Lang;
 	meta: PostFrontmatter;
 	coverUrl: string;
+	/** Only when the post publishes audio (see PLAN.md §6). */
+	audio?: { url: string; file: string; transcript: string };
 	/** URL of the same post in the other languages. */
 	alternates: Partial<Record<Lang, string>>;
 	/** Raw Markdown body, without frontmatter. */
@@ -92,6 +105,13 @@ function loadPosts(): Post[] {
 				lang: p.lang,
 				meta: p.frontmatter,
 				coverUrl: images[prefix + p.frontmatter.cover.slice(2)],
+				audio: p.frontmatter.audio
+					? {
+							url: audios[prefix + p.frontmatter.audio.slice(2)],
+							file: prefix.slice(1) + p.frontmatter.audio.slice(2),
+							transcript: transcripts[`${prefix}transcript.md`]
+						}
+					: undefined,
 				alternates: Object.fromEntries(siblings.map((s) => [s.lang, postPath(s.lang, s.frontmatter.slug)])),
 				body: p.body,
 				images: filesUnder(images, prefix),

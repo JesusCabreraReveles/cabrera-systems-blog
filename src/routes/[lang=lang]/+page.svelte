@@ -69,6 +69,16 @@
 				RSS
 			</a>
 		</li>
+		{#if data.hasPodcast}
+			<li>
+				<a
+					href={resolve('podcast.xml')}
+					class="block rounded border border-white/10 px-3 py-1.5 text-slate-400 transition-colors hover:border-accent hover:text-white"
+				>
+					Podcast
+				</a>
+			</li>
+		{/if}
 	</ul>
 </nav>
 

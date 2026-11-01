@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import AudioPlayer from '#lib/components/AudioPlayer.svelte';
 	import { absoluteAsset, absoluteUrl, site } from '#lib/content.ts';
 	import { formatDate, otherLang, ui } from '#lib/i18n.ts';
 	import type { PageProps } from './$types';
@@ -78,6 +79,18 @@
 		height="630"
 		class="mt-10 aspect-[1200/630] w-full rounded-lg border border-white/5 object-cover"
 	/>
+
+	{#if post.audio && post.meta.duration && post.meta.audioLang}
+		<div class="mt-10">
+			<AudioPlayer
+				src={post.audio.url}
+				duration={post.meta.duration}
+				lang={post.lang}
+				audioLang={post.meta.audioLang}
+				transcript={post.audio.transcript}
+			/>
+		</div>
+	{/if}
 
 	<article class="prose prose-lg prose-blog prose-blog-code mt-12 max-w-none prose-headings:font-headline">
 		<Body />
