@@ -45,7 +45,8 @@
 	<meta property="og:title" content={post.meta.title} />
 	<meta property="og:description" content={post.meta.description} />
 	<meta property="og:url" content={canonical} />
-	<meta property="og:image" content={absoluteAsset(post.coverUrl)} />
+	<meta property="og:image" content={absoluteUrl(`og/${post.id}.jpg`)} />
+	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content={post.meta.coverAlt} />

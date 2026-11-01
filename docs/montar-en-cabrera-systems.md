@@ -67,4 +67,4 @@ Borrar `vercel.json` del portafolio y hacer deploy. El portafolio vuelve a estar
 
 - **Costo:** los rewrites a un dominio externo están incluidos en Vercel Hobby.
 - **Alternativa:** Vercel Microfrontends (también incluido en Hobby, 50K/mes). Más integrado, pero más configuración; el rewrite basta para un blog estático.
-- **Portadas WebP:** algunas redes (LinkedIn en particular) no siempre muestran `og:image` en WebP. Si el Post Inspector no muestra la portada, la solución es que el agente genere también un `cover.jpg` para OG.
+- **Portadas en redes:** `og:image` apunta a una copia JPG que genera el build (`/blog/og/<id>.jpg`), porque LinkedIn no siempre muestra WebP. Si aun así el Post Inspector no muestra la portada, revisar que `/blog/og/...` pase por el rewrite.
