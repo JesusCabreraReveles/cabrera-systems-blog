@@ -10,6 +10,23 @@
 	let t = $derived(ui[post.lang]);
 	let other = $derived(otherLang(post.lang));
 	let canonical = $derived(absoluteUrl(post.alternates[post.lang]));
+	// schema.org data so search engines read the post as an article by the author.
+	let jsonLd = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'BlogPosting',
+			headline: post.meta.title,
+			description: post.meta.description,
+			image: absoluteAsset(post.coverUrl),
+			datePublished: post.meta.date,
+			inLanguage: post.lang,
+			url: canonical,
+			mainEntityOfPage: canonical,
+			keywords: post.meta.hashtags.join(', '),
+			author: { '@type': 'Person', name: site.author.name, url: site.author.url },
+			isPartOf: { '@type': 'Blog', name: site.title, url: absoluteUrl(post.lang) }
+		}).replace(/</g, '\\u003c')
+	);
 	const tagLabel = (id: string) => site.tags.find((tag) => tag.id === id)?.label[post.lang] ?? id;
 </script>
 
@@ -35,6 +52,7 @@
 	<meta property="article:published_time" content={post.meta.date} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@{site.social.x}" />
+	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 </svelte:head>
 
 <div class="relative border-b border-white/5 bg-ink-900">
