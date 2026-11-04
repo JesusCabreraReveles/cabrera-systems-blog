@@ -49,7 +49,7 @@ export type Post = {
 	lang: Lang;
 	meta: PostFrontmatter;
 	coverUrl: string;
-	/** Only when the post publishes audio (see PLAN.md §6). */
+	/** Only when the post publishes audio. */
 	audio?: { url: string; file: string; transcript: string };
 	/** URL of the same post in the other languages. */
 	alternates: Partial<Record<Lang, string>>;

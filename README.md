@@ -43,4 +43,4 @@ A post with an invalid frontmatter, a missing language or a missing file fails t
 | `/blog/sitemap.xml` | Sitemap with `hreflang` |
 | `/blog/share` | Share Kit (unlisted, `noindex`) |
 
-Decisions and their reasons: [`PLAN.md`](PLAN.md). Mounting under cabrera.systems: [`docs/montar-en-cabrera-systems.md`](docs/montar-en-cabrera-systems.md).
+Mounting under cabrera.systems: [`docs/montar-en-cabrera-systems.md`](docs/montar-en-cabrera-systems.md).
