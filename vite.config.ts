@@ -20,7 +20,7 @@ export default defineConfig({
 			adapter: adapter({ runtime: 'nodejs22.x' }),
 			// Served under cabrera.systems/blog (stage 2 mounts it there).
 			paths: { base: '/blog' },
-			prerender: { handleHttpError: 'fail' }
+			prerender: { handleHttpError: 'fail', handleUnseenRoutes: 'ignore' }
 		})
 	]
 });
