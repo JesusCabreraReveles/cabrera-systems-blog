@@ -1,0 +1,10 @@
+Writing specs and reviewing everything the AI does is eating too much of my time.
+
+I like Spec Driven Development, but I wonder if we're ready to let go of the direct interaction with code we've always had as engineers and developers.
+
+My idea: a Scrum team of AI agents with defined roles that talk to each other, generate the backlog and estimate tokens, while we take the Product Owner role.
+
+I wrote about how this could work and what questions it raises:
+https://cabrera.systems/blog/en/scrum-team-ai-agents-human-product-owner
+
+#AI #Scrum #SoftwareEngineering #AIAgents #SpecDrivenDevelopment

@@ -1,0 +1,10 @@
+Escribir specs y revisar todo lo que hace la IA ya se está llevando demasiado tiempo.
+
+Me gusta Spec Driven Development, pero me pregunto si estamos listos para soltar la interacción directa con el código que hemos tenido como ingenieros y desarrolladores.
+
+Mi idea: un equipo Scrum de agentes de IA con roles definidos, que conversan entre ellos, generan el backlog y estiman tokens, mientras nosotros asumimos el rol de Product Owner.
+
+Escribí sobre cómo podría funcionar este enfoque y qué preguntas abre:
+https://cabrera.systems/blog/es/equipo-scrum-agentes-ia-product-owner
+
+#IA #Scrum #DesarrolloDeSoftware #Agentes #SpecDrivenDevelopment

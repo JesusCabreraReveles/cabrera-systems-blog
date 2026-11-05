@@ -1,0 +1,3 @@
+What if, instead of specifying and reviewing everything by hand, a Scrum team of AI agents does the work and you act as Product Owner? I explore it on @TalkingWMy:
+https://cabrera.systems/blog/en/scrum-team-ai-agents-human-product-owner
+#AI #Scrum #AIAgents
