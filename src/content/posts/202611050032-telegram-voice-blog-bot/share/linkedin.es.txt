@@ -1,0 +1,9 @@
+Las redes sociales no deberían consumir más tiempo del que uno quiere darles, así que usé IA para recortar esa carga.
+
+Construí un pequeño blog donde guardo mis ideas conforme aparecen, y desde ahí exporto el contenido a LinkedIn, Instagram y X.
+
+También creé un bot de Telegram: le mando una nota de voz, la convierte en texto y la deja lista para publicar en todas mis redes.
+
+Cuento cómo lo armé aquí: https://cabrera.systems/blog/es/blog-bot-telegram-publicar-redes
+
+#InteligenciaArtificial #Automatizacion #Productividad #Telegram #LinkedIn

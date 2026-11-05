@@ -1,0 +1,9 @@
+Social media shouldn't take more time than you want to give it, so I used AI to cut that load.
+
+I built a small blog where I drop my ideas as they come, and from there I export the content to LinkedIn, Instagram and X.
+
+I also created a Telegram bot: I send a voice note, it turns it into text and gets it ready to publish across all my networks.
+
+Here's how I put it together: https://cabrera.systems/blog/en/blog-telegram-bot-publish-all-networks
+
+#AI #Automation #Productivity #Telegram #LinkedIn

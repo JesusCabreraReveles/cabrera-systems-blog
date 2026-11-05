@@ -1,0 +1,3 @@
+Mando una nota de voz por Telegram y la IA la deja publicada en mi blog y en mis redes. Así recorté el tiempo que me quitan. Más en @TalkingWMy:
+https://cabrera.systems/blog/es/blog-bot-telegram-publicar-redes
+#IA #Telegram #Automatizacion
