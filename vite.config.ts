@@ -19,7 +19,7 @@ export default defineConfig({
 			preprocess: [mdImages(), mdsvex({ extensions: ['.md'], highlight: { highlighter: highlight } })],
 			adapter: adapter({ runtime: 'nodejs22.x' }),
 			// Served under cabrera.systems/blog (stage 2 mounts it there).
-			paths: { base: '/blog' },
+			paths: { base: '/blog', relative: false },
 			prerender: { handleHttpError: 'fail', handleUnseenRoutes: 'ignore' }
 		})
 	]
