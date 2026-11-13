@@ -1,0 +1,1 @@
+Adaptive memory to build, memoryless agents to validate. In OrqestrAI I approve tasks with fewer tokens and less rework. @TalkingWMy https://cabrera.systems/blog/en/adaptive-memory-memoryless-agents-validate-tasks #AI #AIAgents #Scrum
