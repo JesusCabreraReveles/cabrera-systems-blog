@@ -1,0 +1,9 @@
+An agent that validates with memory inherits the biases of whoever did the work. One without memory doesn't.
+
+I'm testing a Google plugin with adaptive memory per project. I use it in OrqestrAI, my development environment, and it keeps context without me repeating it on every task.
+
+Validation is done by other agents with no memory, reviewing the result with fresh eyes. That lets me approve tasks with fewer tokens and less rework.
+
+I wrote up how I set it up and what I'm seeing: https://cabrera.systems/blog/en/adaptive-memory-memoryless-agents-validate-tasks
+
+#AI #AIAgents #Scrum #Google #SoftwareEngineering

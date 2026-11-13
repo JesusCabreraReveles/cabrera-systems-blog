@@ -1,0 +1,1 @@
+Memoria adaptativa para construir, agentes sin memoria para validar. En OrqestrAI apruebo tareas con menos tokens y menos retrabajo. @TalkingWMy https://cabrera.systems/blog/es/memoria-adaptativa-agentes-validar-tareas #IA #Agentes #Scrum

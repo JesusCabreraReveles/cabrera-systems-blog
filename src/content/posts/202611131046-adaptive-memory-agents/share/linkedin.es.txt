@@ -1,0 +1,9 @@
+Un agente que valida con memoria hereda los sesgos de quien hizo el trabajo. Uno sin memoria no.
+
+Estoy probando un plugin de Google con memoria adaptativa por proyecto. Lo uso en OrqestrAI, mi ambiente de desarrollo, y mantiene el contexto sin que tenga que repetirlo en cada tarea.
+
+La validación la hacen otros agentes sin memoria, que revisan el resultado con ojos nuevos. Así apruebo tareas con menos tokens y menos retrabajo.
+
+Escribí sobre cómo lo armé y qué estoy viendo: https://cabrera.systems/blog/es/memoria-adaptativa-agentes-validar-tareas
+
+#IA #Agentes #Scrum #Google #DesarrolloDeSoftware
